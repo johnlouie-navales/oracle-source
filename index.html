@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.5.21/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="app" class="min-h-screen dark:bg-gray-900 text-gray-200">
+        <div class="search-sticky">
+            <div class="max-w-4xl mx-auto px-6">
+                <input 
+                    v-model="search" 
+                    placeholder="Search questions..." 
+                    class="search-input w-full px-4 py-3 rounded-full text-lg placeholder-gray-500 transition-colors duration-200"
+                >
+            </div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="quiz-title text-3xl font-bold mb-8 text-center">{{ source.title }}</h1>
+            
+            <div v-for="(question, index) in filteredQuestions" :key="index" class="mb-8">
+                <div class="question-card rounded-2xl p-6 transition-all duration-200 hover:bg-gray-800">
+                    <h2 class="question-title text-xl font-semibold mb-4">
+                        {{ question.question_text }}
+                    </h2>
+                    
+                    <ul class="space-y-2">
+                        <li 
+                            v-for="(choice, cIndex) in question.choices" 
+                            :key="cIndex"
+                            :style="{ opacity: choice.is_correct ? 1 : 0.6, color: choice.is_correct ? 'green' : '' }"
+                            class="text-base p-2"
+                        >
+                            {{ choice.text }}
+                            <span v-if="choice.is_correct" class="check-icon">✓</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div v-if="filteredQuestions.length === 0 && search" class="no-results">
+                <p>No questions found matching "{{ search }}"</p>
+                <p class="text-sm mt-2 opacity-75">Try searching with different keywords</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
