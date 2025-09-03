@@ -1,0 +1,52 @@
+body {
+    background-color: #101828;
+}
+
+.search-input {
+    background-color: #16181c;
+    border: 1px solid #2f3336;
+    color: #e7e9ea;
+}
+
+.search-input:focus {
+    border-color: #1d9bf0;
+    outline: none;
+}
+
+.quiz-title {
+    margin-top: 1.5rem;
+}
+
+.question-card {
+    border: 1px solid #2f3336;
+}
+
+.search-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem 0;
+}
+
+.check-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid #00ba7c;
+    border-radius: 50%;
+    color: #00ba7c;
+    text-align: center;
+    line-height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.no-results {
+    text-align: center;
+    color: #8b949e;
+    font-size: 18px;
+    margin-top: 3rem;
+    padding: 2rem;
+}
