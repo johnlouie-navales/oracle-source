@@ -1,10 +1,10 @@
 # Oracle Q&A Source
 
-A simple Question and Answer source for Oracle SQL and PL/SQL, built with **Vue 3 (Options API)**, **jQuery AJAX**, and **Tailwind CSS**.  
+A simple Question and Answer source for Oracle Database, built with **Vue 3 (Options API)**, **jQuery AJAX**, and **Tailwind CSS**.  
 This project is hosted as a static site on **GitHub Pages**.
 
 ## 📖 About
-This project provides a searchable collection of SQL and PL/SQL multiple-choice questions with answers.  
+This project provides a searchable collection of Oracle multiple-choice questions with answers.  
 It’s intended as a lightweight reference and study aid, not a full quiz app.
 
 Features:
@@ -31,7 +31,7 @@ This project is deployed on **GitHub Pages**.
 ## 📌 Usage
 - Clone the repo:
   ```bash
-  git clone https://github.com/<your-username>/oracle-source.git
+  git clone https://github.com/johnlouie09/oracle-source.git
   cd oracle-source
   ```
 - Open index.html in your browser
