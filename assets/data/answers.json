@@ -1,0 +1,1915 @@
+{
+    "source": {
+        "title": "Programming (Oracle Database)",
+        "questions": [
+            {
+                "question_text": "Actions are being performed when error occurs during PL/SQL execution in the",
+                "choices": [
+                    {
+                        "text": "BEGIN section",
+                        "is_correct": false 
+                    },
+                    {
+                        "text": "ERROR HANDLING",
+                        "is_correct": false 
+                    },
+                    {
+                        "text": "EXCEPTION",
+                        "is_correct": true 
+                    },
+                    {
+                        "text": "FUNCTION",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Angelica is the Oracle Database Administrator. She was been assigned to create an access for the newly hired employee named Matt to the Oracle Database. Which of the following SQL command Angelica will execute?",
+                "choices": [
+                    {
+                        "text": "CREATE matt ACCESS 1234",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "None of the choices",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "CREATE USERNAME matt PASSWORD 1234",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "CREATE USER matt IDENTIFIED BY 1234",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "CREATE USER matt FR0M DB_USER SET user",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Command use to display table structure",
+                "choices": [
+                    {
+                        "text": "DISPLAY STRUCTURE",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DISPLAY",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DESCRIBE",
+                        "is_correct": true
+                    },
+                    { "text": "DISPLAY TABLE", "is_correct": false }
+                ]
+            },
+            {
+                "question_text": "A Database Administrator can create and remove users and tables.",
+                "choices": [
+                    {
+                        "text": "The statement is correct",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "The statement is incorrect. Only users of the database can be created by the Database Administrator.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The information is insufficient.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The statement is incorrect. DBA can only create users and tables. Removal of users and tables will be done by the higher authority of the database.",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "The two development environments of Oracle are _______________ and ______________.",
+                "choices": [
+                    {
+                        "text": "Oracle DB; SQL command line",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "ANSI SQL Web; Oracle Net SQL",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Oracle SQL Developer; ANSI SQL Web",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Oracle SQL Developer; SQL command line",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Display employee id, lastname, firstname, department name, annual salary, location id of employees whose location id is 1700 and working in Finance Department. Label the annual salary to ANNUAL SALARY. Sort the output in from highest to lowest salary. (4 POINTS)",
+                "choices": [
+                    {
+                        "text": "SELECT E.employee_id, E.last_name, E.first_name, D.department_name, E.salary*12 AS \"ANNUAL SALARY\", D.location_id FROM employees E JOIN jobs J ON E.job_id = J.job_id JOIN departments D ON E.department_id = D.department_id WHERE D.location_id = 1700 AND D.department_name = 'Finance' ORDER BY \"ANNUAL SALARY\" DESC", 
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT E.employee_id, E.last_name, E.first_name, D.department_name, E.salary*12 AS \"ANNUAL SALARY\", D.location_id FROM employees E NATURAL JOIN jobs J ON E.job_id = J.job_id NATURAL JOIN departments D ON E.department_id = D.department_id ORDER BY \"ANNUAL SALARY\" DESC WHERE D.location_id = 1700 AND D.department_name = 'Finance'",
+                        "is_correct": false 
+                    },
+                    { 
+                        "text": "SELECT E.employee_id, E.last_name, E.first_name, D.department_name, E.salary*12 AS \"ANNUAL SALARY\", D.location_id FROM employees E JOIN jobs J ON E.job_id = J.job_id JOINemployees E ON E.department_id = D.department_id WHERE D.location_id = 1700 AND D.department_name = 'Finance' ORDER BY \"ANNUAL SALARY\" DESC",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT E.employee_id, E.last_name, E.first_name, D.department_name, E.salary*12 AS \"ANNUAL SALARY\", D.location_id FROM employees E OUTER JOIN jobs J ON E.job_id = J.job_id OUTER JOIN departments D ON E.department_id = D.department_id WHERE D.location_id = 1700 AND D.department_name = 'Finance' ORDER BY \"ANNUAL SALARY\" DESC",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Create a SQL command to add a new position Database Administrator with job id of DB_ADMIN whose salary ranges from 10,000 to 18,000.",
+                "choices": [
+                    {
+                        "text": "INSERT FROM jobs SET job_id = 'DB_ADMIN', job_title= 'Database Administrator', min_salary = 10000, max_salary=18000", 
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT * FROM jobs VALUES ('DB_ADMIN', 'Database Administrator', 10000, 18000)",
+                        "is_correct": false 
+                    },
+                    { 
+                        "text": "INSERT INTO jobs VALUES ('DB_ADMIN', 'Database Administrator', 10000, 18000)",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "INSERT FROM jobs VALUES ('DB_ADMIN', 'Database Administrator', 10000, 18000)",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "A _______________ consists of a collection of DML statements that form a logical unit of work.",
+                "choices": [
+                    {
+                        "text": "SQL command",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "All of the choices",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Database",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Transaction",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Create an SQL command to display the name of the parts, warehouse number, price and the available stock on hand whose price is below 500. Arrange the list by warehouse number and by class.",
+                "choices": [
+                    {
+                        "text": "SELECT partnum, description, warehouse, onhand, price WHERE price < 500 ORDER BY warehouse, class FROM parts",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT partnum, description, warehouse, onhand, price ORDER BY warehouse, class ORDER BY warehouse, class FROM parts WHERE price < 500",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT partnum, description, warehouse, onhand, price FROM parts ORDER BY warehouse, class WHERE price < 500;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT partnum, description, warehouse, onhand, price FROM parts WHERE price < 500 ORDER BY warehouse, class;",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT partnum, description, warehouse, onhand, price FROM parts ORDER BY warehouse, class WHERE 500 < price;",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Create a SQL command to add a new position Java Developer with job id of JAVA_DEV whose salary ranges from 7,000 to 8,000.",
+                "choices": [
+                    {
+                        "text": "INSERT INTO jobs VALUES ('JAVA_DEV', 'Java Developer', 7000, 8000)",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "INSERT * INTO jobs VALUES (JAVA_DEV, Java Developer, 7000, 8000)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT FROM jobs SET jobs_id = ‘JAVA_DEV’, job_title = ‘Java Developer’ , min_salary =7000 , max_salary= 8000",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT FROM jobs(jobs_id, job_title, min_salary, max_salary) VALUES ('JAVA_DEV', 'Java Developer', 7000, 8000)",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display all the employee's id and salary whose annual salary is from 100,000 to 200,000. Arrange the output by salary in descending order.",
+                "choices": [
+                    {
+                        "text": "SELECT employee_id, salary FROM employees WHERE salary >= 100000 AND salary <= 200000 ORDER BY salary",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, salary FROM employees WHERE salary *12 >= 100000 AND salary *12 <= 200000 ORDER BY salary",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, salary FROM employees WHERE salary *12 >= 100000 AND salary *12 <= 200000 ORDER BY salary desc",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT employee_id, salary, salary *12 FROM employees WHERE 12* salary = 100000 AND 12 *salary = 200000 ORDER BY salary",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Create a SQL command to update the employees table:\n\nEmployee id: 200\nName: Mr. Gary Park\nDate hired: July 1, 2017\nPosition: IT Programmer\nSalary: 10000\nDepartment of assignment: 60\nReporting to manager: 103\n\nSelect the correct SQL statement:",
+                "choices": [
+                    {
+                        "text": "INSERT FROM employees VALUES (200,'Gary','Park', TO_CHAR('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT INTO employees (employee_id,first_name,last_name,hire_date,job_id,salary,manager_id,department_id) VALUES (200,'Gary','Park',TO_DATE('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "INSERT FROM employees VALUES (200,'Gary','Park',TO_DATE('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT INTO employees (employee_id,first_name,last_name,hire_date,job_id,salary,manager_id,department_id) VALUES (200,'Gary','Park', TO_CHAR('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Create a SQL command to update the employees table:\n\nEmployee id: 200\nName: Mr. Gary Park\nDate hired: July 1, 2017\nPosition: IT Programmer\nSalary: 10000\nDepartment of assignment: 60\nReporting to manager: 103\n\nSelect the correct SQL statement:",
+                "choices": [
+                    {
+                        "text": "INSERT FROM employees VALUES (200,'Gary','Park', TO_CHAR('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT INTO employees (employee_id,first_name,last_name,hire_date,job_id,salary,manager_id,department_id) VALUES (200,'Gary','Park',TO_DATE('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "INSERT FROM employees VALUES (200,'Gary','Park',TO_DATE('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT INTO employees (employee_id,first_name,last_name,hire_date,job_id,salary,manager_id,department_id) VALUES (200,'Gary','Park', TO_CHAR('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Create a SQL command to update the employees table:\n\nEmployee id: 200\nName: Mr. Gary Park\nDate hired: July 1, 2017\nPosition: IT Programmer\nSalary: 10000\nDepartment of assignment: 60\nReporting to manager: 103\n\nSelect the correct SQL statement:",
+                "choices": [
+                    {
+                        "text": "INSERT FROM employees VALUES (200,'Gary','Park', TO_CHAR('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT INTO employees (employee_id,first_name,last_name,hire_date,job_id,salary,manager_id,department_id) VALUES (200,'Gary','Park',TO_DATE('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "INSERT FROM employees VALUES (200,'Gary','Park',TO_DATE('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT INTO employees (employee_id,first_name,last_name,hire_date,job_id,salary,manager_id,department_id) VALUES (200,'Gary','Park', TO_CHAR('Jul 1, 2017', 'MON DD, YYYY'), 'IT_PROG', 10000, 103, 60)",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display all location id between 1000 to 2000.",
+                "choices": [
+                    {
+                        "text": "DISPLAY location_id FROM departments WHERE location_id BETWEEN 1000 TO 2000",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT location_id FROM departments WHERE location_id BETWEEN 1000 AND 2000",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "DISPLAY location_id FROM departments WHERE location_id LING 1000 UP TO 2000",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT location_id FROM departments WHERE location_id IN 1000 AND 2000",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display part number description and warehouse number whose part number starts with letter K.",
+                "choices": [
+                    {
+                        "text": "SELECT partnum, description, warehouse FROM parts WHERE partnum LIKE 'K%';",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT partnumber, description, warehouse FROM parts WHERE partnum = LIKE ‘K%’;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM parts WHERE partnum LIKE 'K_';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT partnumber, description, warehouse FROM parts WHERE partnum LIKE 'K*';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM parts WHERE partnum LIKE 'K%';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT partnum, description, warehouse FROM parts WHERE partnum = LIKE ‘K%’;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT partnum, description, warehouse FROM parts WHERE partnum LIKE '*K*';",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display all the employee id, names of employees , job id, hiring_date and department name of all employees of the IT Department",
+                "choices": [
+                    {
+                        "text": "SELECT A.first_name, A.last_name, A.job_id, B.department_name, A.salary, A.hire_dateFROM departments A JOIN employees B ON ( A.department_id = B.department_id) WHERE B.department_name = 'IT'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT A.first_name, A.last_name, A.job_id, B.department_name, A.salary, A.hire_date FROM employees A JOIN departments B WHERE ( A.department_id = B.department_id) AND B.department_name = 'IT'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT A.first_name, A.last_name, A.job_id, B.department_name, A.salary, A.hire_date FROM employees A JOIN departments B ON ( A.department_id = B.department_id) WHERE B.department_name = 'IT'",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT A.first_name, A.last_name, A.job_id, B.department_name, A.salary, A.hire_date FROM employees A JOIN departments B JOIN ( A.department_id = B.department_id) WHERE B.department_name = 'IT'",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display the employee id and the last name of every employee in the company whose salary is between 5000 to 10000. Display the output in a single column with the format 100 : King Label the column as Employee",
+                "choices": [
+                    {
+                        "text": "SELECT CONCAT(employee_id, ':', last_name) AS Employee, salary FROM employees WHERE salary BETWEEN 5000 TO 10000",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT CONCAT(employee_id,last_name) AS Employee FROM employees WHERE salary >5000 AND 10000",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT CONCAT(CONCAT(employee_id, ':'), last_name) AS Employee, salary FROM employees WHERE salary >= 5000 AND salary <= 10000",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT CONCAT(CONCAT(employee_id, ':'), last_name) AS Employee FROM employees WHERE salary >= 5000 AND salary <= 10000",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Diana Lorentz was transferred to Administration department. Using the employees and department table information update the profile of employee.",
+                "choices": [
+                    {
+                        "text": "UPDATE employees SET manager_id = 200, SET department_id = 10 WHERE last_name = 'Lorentz' AND first_name = 'Diana';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE employees SET manager_id = 200, department_id = 10 WHERE last_name = 'Lorentz' AND first_name = 'Diana';",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "UPDATE FROM employees SET manager_id = 200, department_id = 10 WHERE last_name = 'Lorentz' AND first_name = 'Diana';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE FROM employees SET manager_id = 200, SET department_id = 10 WHERE last_name = 'Lorentz' AND first_name = 'Diana';",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display all the records whose stock is below 20 and in warehouse number 3.",
+                "choices": [
+                    {
+                        "text": "SELECT * FROM parts WHERE onhand> 20 OR warehouse = 3;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM parts WHERE onhand<= 20 AND warehouse = 3;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT ALL FROM parts WHERE onhand<= 20 AND warehouse = 3;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM parts WHERE onhand< 20 OR warehouse = 3;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT ALL FROM parts WHERE onhand< 20 AND warehouse = 3;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM parts WHERE onhand< 20 AND warehouse = 3;",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Display all employees whose job id contains the word 'ACCOUNT'.",
+                "choices": [
+                    {
+                        "text": "SELECT * FROM EMPLOYEES WHERE job_id LIKE '_ACCOUNT%';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM EMPLOYEES WHERE job_id LIKE '%ACCOUNT%';",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT * FROM EMPLOYEES WHERE job_id LIKE '*ACCOUNT%';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM EMPLOYEES WHERE job_id LIKE '_ACCOUNT_';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM EMPLOYEES WHERE job_id LIKE '%*ACCOUNT*%';",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Create a SQL command to update the employees table:\nEmployee id: 250\nName: Aldrin Rich\nDate hired: July 1, 2017\nPosition: Accountant\nSalary: 10000\nDepartment of assignment: 100\nReporting to manager: 108",
+                "choices": [
+                    {
+                        "text": "INSERT FROM employees VALUES (250,'Aldrin','Rich',TO_DATE('Jul 1, 2017', 'MON DD, YYYY'), 'ACCOUNTANT', 10000, 103, 60)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT INTO employees (employee_id,first_name,last_name,hire_date,job_id,salary,manager_id,department_id) VALUES (250,'Aldrin','Rich',TO_DATE('Jul 1, 2017', 'MON DD, YYYY'), 'ACCOUNTANT', 10000, 103, 60)",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "INSERT FROM employees VALUES (250,'Aldrin','Rich', TO_CHAR('Jul 1, 2017', 'MON DD, YYYY'), 'ACCOUNTANT', 10000, 103, 60)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT INTO employees (employee_id,first_name,last_name,hire_date,job_id,salary,manager_id,department_id) VALUES (250,'Aldrin','Rich', TO_CHAR('Jul 1, 2017', 'MON DD, YYYY'), 'ACCOUNTANT', 10000, 103, 60)",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display employee's name and id whose firstname starts with letter D and job id is SA_REP. Sort the output by department.",
+                "choices": [
+                    {
+                        "text": "SELECT employees FROM employee_id, first_name, last_name WHERE first_name LIKE ‘D%’ and job_id = ‘IT_PROG’ ORDER BY department_id",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "'IT_PROG' OR first_name LIKE 'D%' and ORDER BY department_id",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, first_name, last_name FROM employees WHERE first_name LIKE 'D%' and job_id = 'IT_PROG' ORDER BY department_id",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT employee_id, first_name, last_name FROM employees ORDER BY department_id WHERE first_name LIKE 'D%' and job_id = 'IT_PROG'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, first_name, last_name FROM employees WHERE job_id = 'IT_PROG' OR first_name LIKE 'D%' and ORDER BY department_id",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display employee's name and id whose firstname starts with letter D and job id is IT_PROG.\nSort the output by department.",
+                "choices": [
+                    {
+                        "text": "SELECT employees FROM employee_id, first_name, last_name WHERE first_name LIKE ‘D%’ and job_id = ‘IT_PROG’ ORDER BY department_id",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, first_name, last_name FROM employees WHERE job_id = 'IT_PROG' OR first_name LIKE 'D%' and ORDER BY department_id",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, first_name, last_name FROM employees ORDER BY department_id WHERE first_name LIKE 'D%' and job_id = 'IT_PROG'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, first_name, last_name FROM employees WHERE first_name LIKE 'D%' and job_id = 'IT_PROG' ORDER BY department_id",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Display all the employee id, names of employees ,job id and department nameof all employees of the Finance Department.",
+                "choices": [
+                    {
+                        "text": "SELECT first_name, last_name, job_id, department_name FROM employees JOIN department ON (department_id) WHERE department_name = 'Finance'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT A.first_name, A.last_name, A.job_id, B.department_name FROM employees A INNER JOIN departments B ON ( A.department_id = B.department_id) ON B.department_name = 'Finance'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT A.first_name, A.last_name, A.job_id, B.department_name FROM employees A JOIN departments B ON ( A.department_id = B.department_id) WHERE B.department_name = 'Finance'",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "All of the choices",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display all employees id and remainder of the his/her salary after it is divided by 3,000 for all employees with the job id of IT_PROG.",
+                "choices": [
+                    {
+                        "text": "SELECT employee_id, job_id, salary, REM(salary/3000) FROM employees WHERE job_id = 'IT_PROG'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, job_id, salary, salary/3000 FROM employees WHERE job_id = 'IT_PROG'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, job_id, salary FROM employees WHERE job_id = 'IT_PROG' AND salary/3000",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, job_id, salary, MOD(salary, 3000) FROM employees WHERE job_id = 'IT_PROG'",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT employee_id, job_id, salary FROM employees WHERE job_id = 'IT_PROG' AND MOD(salary, 3000)",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display a summary table of the total quantity on hand above 50 very class per warehouse",
+                "choices": [
+                    {
+                        "text": "SELECT warehouse, class, sum(onhand) FROM parts GROUP BY warehouseWHERE SUM(ONHAND) > 50",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT warehouse, class, sum(onhand) FROM parts GROUP BY warehouse HAVING SUM(ONHAND) > 50",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT warehouse, class, sum(onhand) FROM parts WHERE SUM(ONHAND) > 50",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT warehouse, class, sum(onhand) FROM parts GROUP BY warehouse,class HAVING SUM(ONHAND) > 50",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Display all the records in the employee table. Arrange the output in by lastname from A-Z order.",
+                "choices": [
+                    {
+                        "text": "SELECT * FROM employees SORT BY lastname",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM employees SORT BY lastname ascending",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM employees ORDER BY lastname",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT * FROM employees ORDER BY lastname AZ",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Create a SQL script to display the fullname of evey employee with the format Lastname, Firstname example Santos, Arnold. Display the output in a single column. Label the column as Fullname",
+                "choices": [
+                    {
+                        "text": "SELECT CONCAT(CONCAT(last_name, ','), first_name) AS Fullname FROM employees;",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT CONCAT(last_name, first_name) AS Fullname FROM employees;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT CONCAT(last_name, ',', first_name) AS Fullname FROM employees",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT CONCAT(last_name, first_name) FROM employees",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display all the records sorted by price from most expensive to the cheapest parts.",
+                "choices": [
+                    {
+                        "text": "SELECT * FROM parts ORDER BY price DESC",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT * FROM parts SORT BY price DESC",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT ALL FROM parts SORT BY price HIGHEST",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT ALL FROM price SORT BY parts HIGHETS",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM parts SORT BY price",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT * FROM parts ORDER BY price",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT ALL FROM parts ORDER BY price",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the given SQL syntax\nINSERT INTO table_name (column1, column2, column3, ...)\nVALUES (value1, value2, value3, ...)\nWHERE condition;",
+                "choices": [
+                    {
+                        "text": "INSERT should be UPDATE command",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Correct syntax.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Wrong placement of WHERE and VALUES",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "This will produce an error.",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the SQL command\nSELECT employee_id, job_id, salary from employees where salary < ALL (SELECT salary FROM employees WHERE job_id = 'FI_ACCOUNT') AND job_id = 'IT_PROG'",
+                "choices": [
+                    {
+                        "text": "This will return an error. Invalid parameter \"ALL\".",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "This will return an error. Job_id FI_ACCOUNT and IT_PROG conflicts.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "This has no error.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "This will return an error. No data will be displayed.",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the following PL/SQL. \n\n1 DECLARE \n2                  v_employee_id employees.employee_id%TYPE := 114; \n3 BEGIN \n4             DELETE employees WHERE employee_id = v_employee_id; \n5 END;",
+                "choices": [
+                    {
+                        "text": "To execute successfully delete line 1,2,3,5.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The PL/SQL will produce an error in line 4.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The PL/SQL will delete employee number 114.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "The PL/SQL will produce an error in line 2.",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the following SQL command\nSELECT employee_id, salary, department_id FROM employees WHERE department_id IN (60,70)",
+                "choices": [
+                    {
+                        "text": "The SQL command will give an incorrect output.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The SQL command will display employees with department id 60 and 70.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The SQL command will produce an error.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The SQL command will display employees with department id 60 or 70.",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the following SQL command\nSELECT employee_id, hire_date, department_name FROM employees, departments\nWHERE departments.department_id = employees.department_id",
+                "choices": [
+                    {
+                        "text": "The SQL command will produce a correct output.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "The SQL command should have ALIAS for the table to produce a correct output.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The SQL command will produce an error.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The SQL command will give an incorrect output.",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the following PL/SQL. Which of the following will line creates an error?\n\n1. CREATE OR REPLACE PROCEDURE query_emp\n2. (\n3. p_department_id    IN  employees.department_id%TYPE,\n4. p_name   OUT employees.last_name%TYPE,\n5. p_salary OUT employees.salary%TYPE\n 6. )\n7. IS\n 8. BEGIN\n 9. SELECT  last_name, salary, department_id INTO p_name, p_salary, p_department_id\n 10. FROM  employees\n11. WHERE   salary >= p_salary AND department_id = p_department_id ;\n12. END query_emp;",
+                "choices": [
+                    {
+                        "text": "Line 9",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Line 1",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Line 11",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Line 5",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Line 3",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "No error",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the following PL/SQL. At what line number is the error of the PL/SQL?\n\nDECLARE\n\nv_deptno NUMBER := 800;\n\ne_invalid EXCEPTION;\n\nBEGIN\n\nDELETE FROM departments\nWHERE department_id = v_deptno;\n\nIF SQL % NOT_FOUND THEN\nRAISE e_invalid;\nEND IF;\n\nCOMMIT;\n\nEXCEPTION\nWHEN e_invalid THEN\nDBMS_OUTPUT.PUT_LINE('No such department id.');\n\nEND;",
+                "choices": [
+                    {
+                        "text": "2",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "3",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "8",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "7",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "12",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Every employee will get a bonus of 150% of his/her current salary. Display the employee id, salary and the bonus of every employee. Label the computed bonus with Bonus",
+                "choices": [
+                    {
+                        "text": "SELECT employee_id, salary, salary * 150 AS \"Bonus\" FROM employees",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, salary, salary * 150% AS \"Bonus\" FROM employees",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, salary, salary * 1.5 AS Bonus FROM employees",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT employee_id, salary, salary * 1.50% AS Bonus FROM employees",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the following. What will be the output?\n\nDECLARE\n  SUBTYPE Accumulator IS NUMBER (4,2);\n  v_amount  accumulator;\n  v_num1   NUMBER;\n  v_num2   NUMBER;\n  v_num3   NUMBER;\nBEGIN\n  v_amount := 10.50;\n  v_num1  := 1;\n  v_num2  := 2;\n  v_num3  := 3;\n  v_num1 := v_amount;\n  v_num2 := v_num1 + v_amount;\n  v_num2 := v_num2 - v_num3;\n\n  dbms_output.put_line('Total is: ' || v_num2);\n\nEND;",
+                "choices": [
+                    {
+                        "text": "18",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "8.5",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "None of the choices",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "-1",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the following SQL command\n\nSELECT employee_id, min_salary, max_salary FROM employees, departments WHERE salary>= 10000 && salary <= 20000",
+                "choices": [
+                    {
+                        "text": "The SQL command will produce an error.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "The SQL will display the employee id, department id and the minimum and maximum salary whose salary is between 10000 and 20000.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The SQL command will give an incorrect output.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The SQL will produce Cartesian Product",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the SQL command\n\nSELECT employee_id, salary from employees where salary = ANY (SELECT salary FROM employees WHERE job_id = 'IT_PROG') AND job_id = 'ST_CLERK'",
+                "choices": [
+                    {
+                        "text": "This will return an error. Parenthesis in the subquery should be removed.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "This will return an error. \"ANY\" can not be compared to salary",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "This has no error.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "This will return an error. Employees table can not be used in the subquery if it used in the main query.",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the SQL command\n\nSELECT employee_id, last_name, first_name, job_id FROM employees WHERE department_id = (SELECT max(department_id) FROM employees GROUP BY department_id)",
+                "choices": [
+                    {
+                        "text": "This will return an error. Department Id should be included in the list of field in the main query.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "This will return an error. Parenthesis in the subquery should be removed.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "This has no error.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "This will return an error. Single-row subquery returns more than one row.",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Given the answer in item __________, which of the folllowing stored procedure will display the employee id and salary of Steven King?",
+                "choices": [
+                    {
+                        "text": "DECLARE\nv_employee_id employees.employee_id VARCHAR(10);\nv_emp_sal employees.salary NUMERIC(10);\nBEGIN\nquery_emp('King', 'Steven', v_employee_id, v_emp_sal);\nDBMS_OUTPUT.PUT_LINE('Employee ID ' || v_employee_id ||' earns '|| to_char(v_emp_sal, '$999,999.00'));\nEND;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DECLARE\nv_employee_id employees.employee_id%TYPE;\nv_emp_sal employees.salary%TYPE;\nBEGIN\nquery_emp('King', 'Steven', v_employee_id, v_emp_sal);\nDBMS_OUTPUT.PUT_LINE('Employee ID ' || v_employee_id ||' earns '|| to_char(v_emp_sal, '$999,999.00'));\nEND;",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "DECLARE\nquery_emp('King', 'Steven', v_employee_id, v_emp_sal);\nBEGIN\nv_employee_id employees.employee_id VARCHAR(10);\nv_emp_sal employees.salary NUMERIC(10);\nDBMS_OUTPUT.PUT_LINE('Employee ID ' || v_employee_id ||' earns '|| to_char(v_emp_sal, '$999,999.00'));\nEND;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DECLARE\nv_employee_id employees.employee_id%TYPE;\nv_emp_sal employees.salary%TYPE;\nquery_emp('King', 'Steven', v_employee_id, v_emp_sal);\nBEGIN\nDBMS_OUTPUT.PUT_LINE('Employee ID ' || v_employee_id ||' earns '|| to_char(v_emp_sal, '$999,999.00'));\nEND;",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the following PL/SQL.\n1 DECLARE\n\n2 v_employee_id employees.employee_id%TYPE := 114;\n\n3 BEGIN\n\n4 DELETE employees WHERE employee_id = v_employee_id;\n\n5 END;\n\nQuestion 14 Select one:",
+                "choices": [
+                    {
+                        "text": "The PL/SQL will produce an error in line 4.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The PL/SQL will delete employee number 114.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "To execute successfully delete line 1,2,3,5.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The PL/SQL will produce an error in line 2.",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the PL/SQL\nDECLARE\nv_first_name VARCHAR2(50);\nv_last_name VARCHAR2(50);\nv_salary INTEGER(20);\nBEGIN\nSELECT first_name, last_name, salary INTO v_first_name, v_last_name, v_salary FROM employees WHERE department_id = 60;\nDBMS_OUTPUT.PUT_LINE('Firstname : '|| v_first_name);\nDBMS_OUTPUT.PUT_LINE('Lastname : '|| v_last_name);\nDBMS_OUTPUT.PUT_LINE('Salary : '|| v_salary);\nEND;",
+                "choices": [
+                    {
+                        "text": "No Error.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Error in line 2,3,4",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Error in Line 7,8,9.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Error in Line 6.",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the following SQL command\nSELECT * FROM jobs WHERE job_title LIKE 'Manager%'\n\nQuestion 16 Select one:",
+                "choices": [
+                    {
+                        "text": "The SQL command will display all records in the database",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The SQL command will produce an error.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The SQL command will display all employees with Manager position",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "No records will be displayed",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the following PL/SQL.\nDECLARE\n\n  v_email VARCHAR(20);\n\nBEGIN\n\n  SELECT email INTO v_email FROM EMPLOYEES WHERE email like 'D%';\n\n  DBMS_OUTPUT.PUT_LINE ('Employees whose email address starts with letter D :' || v_email);\n\nEXCEPTION\n\n  WHEN TOO_MANY_ROWS THEN\n\n  DBMS_OUTPUT.PUT_LINE (' Your select statement retrieved multiple rows.');\n\nEND;",
+                "choices": [
+                    {
+                        "text": "None of the choices",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "An error will occur in SQL command.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "An error will occur in EXCEPTION section.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The PL/SQL block will run successfully.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "An error will occur in declaration section.",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the following PL/SQL.\nDECLARE\nv_email VARCHAR(20);\nBEGIN\nSELECT email INTO v_email FROM EMPLOYEES WHERE email like 'D%';\nDBMS_OUTPUT.PUT_LINE ('Employees whose email address starts with letter D :' || v_email);\nEXCEPTION\nWHEN TOO_MANY_ROWS THEN\nDBMS_OUTPUT.PUT_LINE (' Your select statement retrieved multiple rows.');\nEND;",
+                "choices": [
+                    {
+                        "text": "An error will occur in EXCEPTION section.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "An error will occur in declaration section.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The PL/SQL block will run successfully.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "An error will occur in SQL command.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "None of the choices",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the SQL Command:\n\nSELECT job_id, job_title FROM jobs J WHERE INCLUDES\n(SELECT * FROM employees WHERE J.job_id = e.job_id);",
+                "choices": [
+                    {
+                        "text": "The SQL will return an error. Main query should interchanged with the sub query.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The SQL will return an error. Invalid \"INCLUDES\" parameter.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "This will return an error. Parenthesis in the subquery should be removed.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "This has no error.",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Evaluate the PL/SQL:\n1. DECLARE\n\n2. v_first_name VARCHAR2(50);\n\n3. v_last_name VARCHAR2(50);\n\n4. v_salary INTEGER(20);\n\n5. BEGIN\n\n6. SELECT first_name, last_name, salary INTO v_first_name, v_last_name, v_salary FROM employees WHERE department_id = 60;\n\n7. DBMS_OUTPUT.PUT_LINE('Firstname : '|| v_first_name);\n\n8. DBMS_OUTPUT.PUT_LINE('Lastname : '|| v_last_name);\n\n9. DBMS_OUTPUT.PUT_LINE('Salary : '|| v_salary);\n\n10. END;",
+                "choices": [
+                    {
+                        "text": "Error in variable declaration",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Error in Line 6.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "No Error.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Error in Line 7,8,9.",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Remove the Shareholder Services department in the department table",
+                "choices": [
+                    {
+                        "text": "DELETE * FROM departments_name HAVING department_name LIKE '%Shareholder Services%'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "None of the choices",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DELETE departments FROM departments_name WHERE department_name = ‘%Shareholder Services%’",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DELETE FROM departments WHERE department_name = ‘Shareholder Services’",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "A new department name Training with department id 300 was created in the company. This will be managed by a Manager with ID of 203 and will located at location id 2400. \n\nCreate a SQL command to update the information in the department table.",
+                "choices": [
+                    {
+                        "text": "INSERT * FROM departments VALUES (300, 'Training', 203, 2400)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT INTO departments SET department_id = 300, department_name = 'Training', manager_id = 203, location_id = 2400",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INSERT INTO departments VALUES (300, 'Training', 203, 2400)",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "INSERT FROM departments(department_id, department_name, manager_id, location_id) VALUES (300, 'Training', 203, 2400)",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Given the SQL command\nSELECT * FROM employees JOIN departments USING (department_id)\nWhich of the following describes the SQL command?",
+                "choices": [
+                    {
+                        "text": "Joined table from the employees and department table",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Cartesian Product",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Results to invalid SQL command",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Display a full outer join",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Results to invalid relational operator",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Display the manager id and employee id of every employee",
+                "choices": [
+                    {
+                        "text": "SELECT E.employee_id, D.manager_id FROM employees E INNER JOIN departments D USING E.department_id = D.department_id",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT E.employee_id, D.manager_id FROM employees E OUTER JOIN departments D ON E.department_id = D.department_id",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT E.employee_id, D.manager_id FROM employees E JOIN departments D ON E.department_id = D.department_id",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT E.employee_id, D.manager_id FROM employees E FULL JOIN departments D WHERE E.department_id = D.department_id",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Update the Purchasing department name to Procurement. And this will be managed by the Manager of Administration department.",
+                "choices": [
+                    {
+                        "text": "UPDATE departments_name FROM departments SET department_name = 'Procurement', SET manager_id = 200 WHERE department_name = 'Purchasing'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE FROM departments SET department_name = 'Procurement' AND manager_id = 200 WHERE department_name = 'Purchasing'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE * FROM departments SET department_name = 'Procurement', SET manager_id = 200 HAVING department_name = 'Purchasing'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE departments SET department_name = 'Procurement', manager_id = 200 WHERE department_name = 'Purchasing'",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Display the location id of all employee's name and salary whose salary is from 5000 to 10000.",
+                "choices": [
+                    {
+                        "text": "SELECT first_name, last_name, salary FROM employees JOIN departments USING (department_id) WHERE salary >= 5000 AND salary <= 10000",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT employees.first_name, employees.last_name, employees.salary FROM employees JOIN departments ON (department_id) WHERE employees.salary >= 5000 AND employees.salary <= 10000",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT first_name, last_name, salary FROM employees JOIN departments USING (department_id) WHERE MIN(salary) = 5000 AND MAX(salary) = 10000",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employees.first_name, employees.last_name, employees.salary FROM employees CROSS JOIN departments USING (department_id) WHERE employees.salary >= 5000 AND employees.salary <= 10000",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Given the SQL command\n\nSELECT employees.first_name, employees.last_name, employees.salary,departments.department_name\nFROM employees, departments\nWHERE employees.department_id = departments.department_id;\nWhich of the following describes the SQL command?",
+                "choices": [
+                    {
+                        "text": "Results to invalid SQL command",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Results to invalid relational operator",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "List of employees name, salary and department name",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Display a full outer join",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Cartesian Product",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "This has the highest level of privileges for task such as creating new users, removing users and tables and backing up tables.",
+                "choices": [
+                    {
+                        "text": "Owner",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SQL Developer",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DBA",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Manager",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Which of the following SQL command that the DBA will run to provide Matt to create a table in the Oracle Database.",
+                "choices": [
+                    {
+                        "text": "GRANT matt create table",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "GRANT matt TO create table",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "GRANT create table TO matt",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "GRANT ACCESS matt TO create table",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "What privileges that manipulates the content of the database objects.",
+                "choices": [
+                    {
+                        "text": "Connection Privileges",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Object Privileges",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Network Privileges",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "System Privileges",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "INDEX is an example of _____________________ privilege.",
+                "choices": [
+                    {
+                        "text": "Data",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "System",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Object",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "None of the choices",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "A Cartesian product is formed when:",
+                "choices": [
+                    {
+                        "text": "All of the choices",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "A join condition is invalid",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "All rows in the first table are joined to all rows in the second table",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "A join condition is omitted",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Which of the following DOES NOT describes the state of the data after the COMMIT command",
+                "choices": [
+                    {
+                        "text": "All users can view the results.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "All savepoints are erased.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "None of the choices",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "The previous state of the data is overwritten.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Data changes are saved in the database.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Locks on the affected rows are released; those rows are available for other users to manipulate.",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "A join between two tables that returns the results of the INNER join as well as the_______________ rows from the left (or right) table is called a left (or right) OUTER join.",
+                "choices": [
+                    {
+                        "text": "Missing",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Matched",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Unmatched",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Intersect",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "INSERT, DELETE, UPDATE are ________________ commands",
+                "choices": [
+                    {
+                        "text": "DCL",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "All of the choices",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DDL",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DML",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "SQL command to create a marker in the current transaction.",
+                "choices": [
+                    {
+                        "text": "POINTER",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INDEX",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SAVEMARKER",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SAVEMORE",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SAVEPOINT",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Which of the following will erase all records in the departments table",
+                "choices": [
+                    {
+                        "text": "DELETE FROM departments",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "TRUNCATE FROM TABLE departments",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "TRUNCATE TABLE departments",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "DELETE * FROM departments",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "TRUE OR FALSE.\n\nA FOREIGN KEY is a field in one table that refers to the PRIMARY KEY in another table.",
+                "choices": [
+                    {
+                        "text": "True",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "False",
+                        "is_correct": false
+                    }
+                ],
+                "type": "true_false"
+            },
+            {
+                "question_text": "Which of the following will grant a query privileges on the STUDENT table",
+                "choices": [
+                    {
+                        "text": "GRANT select TO matt ON student",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "GRANT select ON student TO matt",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "GRANT matt PRIVILEGE select TO student",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "GRANT matt TO select student",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Which of the following command will delete all records in the table employees",
+                "choices": [
+                    {
+                        "text": "DELETE FROM employees",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "DELETE ALL FROM employees",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DELETE employees WHERE ORASYS_REC > 0",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DELETE ALL RECORDS employees",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Which of the following describes the command below?\n\nSELECT * FROM employees WHERE department = 60 FOR UPDATE",
+                "choices": [
+                    {
+                        "text": "Creates a temporary table with department = 60",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "All users accessing the department id 60 can accept UPDATE command simultaneously.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Locks the rows in the EMPLOYEES table with department id is 60.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Unlock all records with department id = 60",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Given the DEPARTMENTS table and USER user1, evaluate the SQL command:\nGRANT select\n\nON     user1\n\nTO     departments;",
+                "choices": [
+                    {
+                        "text": "None of the choices",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The folllowing will grant object privileges on USER user1",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The SQL command is incorrect",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "The following will grant query privileges on the DEPARTMENTS table:",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "GRANT is a _____________________ command.",
+                "choices": [
+                    {
+                        "text": "All of the choices",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DCL",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "DML",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DDL",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "In PL/SQL Block Structure, which of the following are OPTIONAL?",
+                "choices": [
+                    {
+                        "text": "DECLARE and BEGIN",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "None of the choices",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "BEGIN and EXCEPTION",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DECLARE and END",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "BEGIN and END",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "EXCEPTION and END",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Which of the following PL/SQL that will display the total number employees whose salary is 10000 and above?",
+                "choices": [
+                    {
+                        "text": "DECLARE\nv_salary employees.salary%TYPE :>= 10000;\nBEGIN\nSELECT COUNT(salary) INTO v_salary FROM employees WHERE salary >= v_salary;\nDBMS_OUTPUT.PUT_LINE(‘Total:’ || v_salary);\nEND;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "None of the Choices",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DECLARE\nv_salary TYPE%NUMERIC >= 10000;\nBEGIN\nSELECT COUNT(salary) INTO v_salary FROM employees WHERE salary >= v_salary;\nDBMS_OUTPUT.PUT_LINE(‘Total:’ || v_salary);\nEND;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DECLARE\nv_salary employees.salary%TYPE := 10000;\nBEGIN\nSELECT COUNT(*) INTO v_salary FROM employees WHERE salary >= v_salary;\nDBMS_OUTPUT.PUT_LINE(v_salary);\nEND;",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "PL/SQL Provides a block structure for executable units of ________________.",
+                "choices": [
+                    {
+                        "text": "Data",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Table",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Code",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Information",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Which of the folllowing is required in a subquery?",
+                "choices": [
+                    {
+                        "text": "GROUP BY",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "HAVING BY",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "ORDER BY",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Which of the following does NOT describes SELECT Statement in a PL/SQL.",
+                "choices": [
+                    {
+                        "text": "Queries must return only one column.",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "WHERE clause is required.",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "INTO clause should be followed by a varible name",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "The INTO clause is required.",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "You want to display all employee id, name, hired date and salary who are hired after employee 104 was hired.",
+                "choices": [
+                    {
+                        "text": "SELECT employee_id, last_name, hire_date, salary FROM employees WHERE TO_NUMBER(TO_CHAR(hire_date, 'YYYY')) > (SELECT TO_NUMBER(TO_CHAR(hire_date, 'YYYY')) FROM employees WHERE employee_id = 104)",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT employee_id, last_name, hire_date, salary FROM employees WHERE TO_CHAR(hire_date, 'YYYY') ANY\n(SELECT TO_CHAR(hire_date, 'YYYY') FROM employees WHERE employee_id = 104)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, last_name, hire_date, salary FROM employees WHERE TO_NUMBER((hire_date, 'YYYY') IN\n(SELECT TO_NUMBER(hire_date, 'YYYY') FROM employees WHERE\nemployee_id = 104)",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT employee_id, last_name, hire_date, salary FROM employees WHERE TO_NUMBER(TO_CHAR(hire_date, 'YYYY')) ALL\n(SELECT TO_NUMBER(TO_CHAR(hire_date, 'YYYY')) FROM employees WHERE employee_id = 104)",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "This is a type of cursor which is created and managed internally by the Oracle server to process SQL statements",
+                "choices": [
+                    {
+                        "text": "Exclusive",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Explicit",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Interactive",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Implicit",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Coded",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "In PL/SQL Block Structure, which of the following are mandatory?",
+                "choices": [
+                    {
+                        "text": "BEGIN and EXCEPTION",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "EXCEPTION and END",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DECLARE and BEGIN",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "DECLARE and END",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "BEGIN and END",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Add a 500 pesos increase in salary of all employees who have rendered services 10 years and above.",
+                "choices": [
+                    {
+                        "text": "UPDATE employees SET salary = salary + 500 where TO_CHAR(sysdate,'YYYY') - TO_CHAR(hire_date,'YYYY') >= 10",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "UPDATE salary FROM employees SET salary + 500 where TO_YEAR(sysdate,'YYYY') - TO_YEAR(hire_date,'YYYY') >= 10",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE employees SET salary = salary + 500 where YEAR(sysdate,'YYYY') - YEAR(hire_date,'YYYY') >= 10",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE salary= salary + 500 where TO_DATE(sysdate,'YYYY') - TO_DATE(hire_date,'YYYY') >= 10",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Update all minimun salary of the IT Programmer position with twice of the existing minimum salary the position.",
+                "choices": [
+                    {
+                        "text": "UPDATE min_salary FROM jobs SET min_salary = min_salary * 2 WHERE job_id = 'IT_PROG'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE FROM jobs SET min_salary = min_salary * 2 WHERE job_id = 'IT_PROG';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE min_salary FROM jobs SET min_salary * 2 WHERE job_id = 'IT_PROG'",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE jobs SET min_salary = min_salary * 2 WHERE job_id = 'IT_PROG';",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Austin David was transferred to Purchasing Department. You are assigned to update the database. ",
+                "choices": [
+                    {
+                        "text": "UPDATE employees SET department_id = 30 WHERE first_name = ‘David’ AND last_name = ‘Austin’",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "UPDATE employees WHERE department_id = 30 SET first_name = ‘David’ AND last_name = ‘Austin’",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE department_id = 30 WHERE first_name = ‘David’ AND last_name = ‘Austin’",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE first_name = ‘David’ AND last_name = ‘Austin’ FROM employees SET department_id = 30",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Add a 1200 pesos increase in salary of all employees who have rendered services 10 years and above.",
+                "choices": [
+                    {
+                        "text": "UPDATE salary FROM employees SET salary + 1200 where TO_YEAR(sysdate,'YYYY') - TO_YEAR(hire_date,'YYYY') >= 10",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE employees SET salary = salary + 1200 where YEAR(sysdate,'YYYY') - YEAR(hire_date,'YYYY') >= 10",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE salary= salary + 1200 where TO_DATE(sysdate,'YYYY') - TO_DATE(hire_date,'YYYY') >= 10",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "UPDATE employees SET salary = salary + 1200 where TO_CHAR(sysdate,'YYYY') - TO_CHAR(hire_date,'YYYY') >= 10",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "What will be the output of the SQL command below?\nSELECT first_name, last_name, job_title FROM employees CROSS JOIN jobs ORDER BY last_name;",
+                "choices": [
+                    {
+                        "text": "A Cartesian product",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "List of names from the employees and jobs table and the unmatched records from the employees table",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "List of names and job title of matched records from the employees and jobs table",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "List of names and jobtitle of unmatched records from the employees and jobs table",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "List of names from the employees and jobs table and the unmatched records from the jobs table",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    }
+}
