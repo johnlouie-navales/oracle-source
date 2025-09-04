@@ -23,13 +23,11 @@
         
         <div class="max-w-4xl mx-auto px-6">
             <h1 class="quiz-title text-3xl font-bold mb-8 text-center md:text-4xl">{{ source.title }}</h1>
-            
             <div v-for="(question, index) in filteredQuestions" :key="index" class="mb-8">
                 <div class="question-card rounded-2xl p-6 transition-all duration-200 hover:bg-gray-800">
                     <h2 class="question-title text-xl font-semibold mb-4 md:text-2xl">
                         {{ question.question_text }}
                     </h2>
-                    
                     <ul class="space-y-2">
                         <li 
                             v-for="(choice, cIndex) in question.choices" 
