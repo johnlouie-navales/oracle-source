@@ -4,7 +4,8 @@ createApp({
     data() {
         return {
             source: { title: 'Oracle Q&A Source', questions: [] },
-            search: ''
+            search: '',
+            isMobile: false
         };
     },
     computed: {
@@ -25,5 +26,24 @@ createApp({
                 console.error("Failed to load JSON:", err);
             }
         });
+
+        this.checkDevice();
+        window.addEventListener('resize', this.checkDevice);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                e.preventDefault();
+                this.$refs.search.focus();
+            }
+        });
+    },
+    methods: {
+        checkDevice() {
+            this.isMobile = window.innerWidth <= 768;
+        }
+    },
+    beforeDestroy() {
+        window.removeEventListener('resize', this.checkDevice);
     }
+
 }).mount('#app');
