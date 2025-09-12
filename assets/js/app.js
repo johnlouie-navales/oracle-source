@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            source: { title: 'Oracle Q&A Source', questions: [] },
+            source: { title: '', questions: [] },
             search: '',
             isMobile: false
         };
