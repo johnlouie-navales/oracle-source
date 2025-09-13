@@ -2682,7 +2682,7 @@
                     },
                     {
                         "text": "SELECT first_name, last_name, job_id, min_salary, max_salary FROM employees JOIN jobs USING (job_id);",
-                        "is_correct": false
+                        "is_correct": true
                     },
                     {
                         "text": "SELECT first_name, last_name, job_id, min_salary, max_salary FROM employees, jobs JOIN USING (job_id)",
@@ -2707,7 +2707,7 @@
                     },
                     {
                         "text": "SELECT department_id, MAX(salary) FROM employees GROUP BY department_id",
-                        "is_correct": false
+                        "is_correct": true
                     }
                 ]
             }
