@@ -8,44 +8,102 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-    <div id="app" class="container min-h-screen dark:bg-gray-900 text-gray-200 mx-auto px-4 py-8 max-w-4xl">
-        <div class="search-sticky">
-            <div class="max-w-4xl mx-auto px-6">
-                <input 
-                    ref="search"
-                    v-model="search" 
-                    :placeholder="isMobile ? 'Search questions...' : 'Press / to search questions...'" 
-                    class="search-input w-full px-4 py-3 rounded-full text-lg placeholder-gray-500 transition-colors duration-200"
-                >
-            </div>
+<body class="flex flex-col min-h-screen dark:bg-gray-900 text-gray-200">
+    <div id="app" class="flex flex-col flex-1 container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Search Bar -->
+        <div class="search-sticky mb-6">
+            <input 
+                ref="search"
+                v-model="search" 
+                :placeholder="isMobile ? 'Search questions...' : 'Press / to search questions...'" 
+                class="w-full px-4 py-3 rounded-full text-lg placeholder-gray-400 bg-gray-800 text-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-800"
+            >
         </div>
-        
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="quiz-title text-3xl font-bold mb-8 text-center md:text-4xl">{{ source.title }}</h1>
+
+        <!-- Title -->
+        <header>
+            <h1 class="quiz-title text-3xl font-bold mb-8 text-center md:text-4xl">
+                {{ source.title }}
+            </h1>
+        </header>
+
+        <!-- Questions -->
+        <main class="flex-1">
             <div v-for="(question, index) in filteredQuestions" :key="index" class="mb-8">
                 <div class="question-card rounded-2xl p-6 transition-all duration-200 hover:bg-gray-800">
+                    <!-- Question text -->
                     <h2 class="question-title text-xl font-semibold mb-4 md:text-2xl">
                         {{ question.question_text }}
                     </h2>
+
+                    <!-- Image -->
+                    <img 
+                        v-if="question.image" 
+                        :src="question.image" 
+                        alt="Question image" 
+                        class="my-4 rounded-lg max-h-64 object-contain"
+                    >
+
+                    <!-- Sub-question -->
+                    <h3 
+                        v-if="question.question_subtext" 
+                        class="text-lg font-medium mb-4 md:text-xl text-gray-300"
+                    >
+                        {{ question.question_subtext }}
+                    </h3>
+
+                    <!-- Note -->
+                    <p 
+                        v-if="question.question_note" 
+                        class="pl-5 text-base text-gray-400 mb-4"
+                    >
+                        {{ question.question_note }}
+                    </p>
+
+                    <!-- Choices -->
                     <ul class="space-y-2">
                         <li 
                             v-for="(choice, cIndex) in question.choices" 
                             :key="cIndex"
-                            :style="{ opacity: choice.is_correct ? 1 : 0.6, color: choice.is_correct ? 'green' : '' }"
-                            class="text-base p-2"
+                            :class="[
+                                'flex items-center text-base p-2 rounded-md transition-colors',
+                                choice.is_correct 
+                                    ? 'text-green-800 font-semibold' 
+                                    : 'opacity-50 text-gray-300'
+                            ]"
                         >
-                            {{ choice.text }}
-                            <span v-if="choice.is_correct" class="check-icon mr-2">✓</span>
+                            <span>{{ choice.text }}</span>
+                            <!-- Icon if correct -->
+                            <svg v-if="choice.is_correct" 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="h-5 w-5 text-green-700 shrink-0 ml-2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="m9 12 2 2 4-4"></path>
+                            </svg>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div v-if="filteredQuestions.length === 0 && search" class="no-results">
-                <p>No questions found matching "{{ search }}"</p>
-                <p class="text-sm mt-2 opacity-75">Try searching with different keywords</p>
+
+            <!-- No results -->
+            <div v-if="filteredQuestions.length === 0 && search" class="text-center mt-8">
+                <p class="text-lg text-gray-400">No questions found matching "{{ search }}"</p>
+                <p class="text-sm text-gray-500 mt-2 opacity-75">Try searching with different keywords</p>
             </div>
-        </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-12 py-6 border-t border-gray-700 text-center text-sm text-gray-400">
+            <p>
+                Oracle Source © {{ currentYear }} • Built with 💖
+            </p>
+        </footer>
     </div>
 
     <script src="assets/js/app.js"></script>
