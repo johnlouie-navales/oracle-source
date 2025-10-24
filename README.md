@@ -20,7 +20,7 @@ This project is deployed on **GitHub Pages**.
 2. Go to **Settings > Pages**.
 3. Under **Branch**, select `main` and `/ (root)` folder.
 4. Save → your site will be live at:
-5. https://johnlouie09.github.io/oracle-source/
+5. https://johnlouie-navales.github.io/oracle-source/
 
 ## Tech Stack
 - [Vue 3 (Options API)](https://vuejs.org/)
@@ -31,7 +31,7 @@ This project is deployed on **GitHub Pages**.
 ## Usage
 - Clone the repo:
   ```bash
-  git clone https://github.com/johnlouie09/oracle-source.git
+  git clone https://github.com/johnlouie-navales/oracle-source.git
   cd oracle-source
   ```
 - Open index.html in your browser
